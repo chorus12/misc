@@ -4,6 +4,7 @@
 [PromQL Cheat sheet](https://promlabs.com/promql-cheat-sheet/)  
 [How does a Prometheus Counter work?](https://www.robustperception.io/how-does-a-prometheus-counter-work)  
 [PromQL for humans](https://timber.io/blog/promql-for-humans/)  
+[The above link does not work - here's a google's copy of it](https://webcache.googleusercontent.com/search?q=cache:Jlluk8h7rVIJ:https://timber.io/blog/promql-for-humans/%3Fref%3Dalian.info&cd=1&hl=ru&ct=clnk&gl=ru)
 [Awesome Prometheus](https://github.com/roaldnefs/awesome-prometheus)  
 
 
