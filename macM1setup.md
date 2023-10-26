@@ -1,6 +1,6 @@
 # Mac M1 Silicon Setup
 
-1) Устанавливаем homebrew https://brew.sh
+1) Устанавливаем homebrew https://brew.sh  
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 2) Ставим xcode.
