@@ -64,8 +64,45 @@ https://www.petergirnus.com/blog/how-to-use-sshfs-on-macos
 Монтировать диски можно вот такой командой:
 `sshfs username@remote:<удаленный путь> <локальный путь - куда монтировать> -o volname=VOLUME_NAME`
 
+9) Устанавливаем jax, flax для ускоренной работы с многомерными массивами
+https://developer.apple.com/metal/jax/
 
+`python -m pip install numpy wheel ml-dtypes==0.2.0`
 
+```python
+# obtain JAX source code
+git clone https://github.com/google/jax.git --branch jaxlib-v0.4.10 --single-branch
+cd jax
+# build jaxlib from source, with capability to load plugin
+python build/build.py --bazel_options=--@xla//xla/python:enable_tpu=true
+# install jaxlib
+python -m pip install dist/*.whl
+# install jax
+python -m pip install jax
+python -m pip install jax-metal==0.0.3
+```
 
+## Ставим трансформеры
 
+https://huggingface.co/docs/transformers/installation
 
+```sh
+pip install torch sentencepiece \
+  accelerate \
+  bitsandbytes \
+  transformers==4.30 \
+  git+https://github.com/huggingface/peft.git
+```
+git+https://github.com/huggingface/transformers.git@15641892985b1d77acc74c9065c332cd7c3f7d7f \
+
+TRANSFORMERS_CACHE - где хранить кеш для моделей трансформеров
+HF_DATASETS_OFFLINE=1 - прямой выбор данных из кеша, без попытки скачать
+TRANSFORMERS_OFFLINE=1
+
+```sh
+pip install auto-gptq \
+ git+https://github.com/huggingface/optimum.git
+```
+
+## Настраиваем copy path в Finder
+https://automationpanda.com/2017/09/07/copying-file-paths-from-finder-in-macos/
